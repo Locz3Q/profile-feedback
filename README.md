@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Project is a first part of my profile portfolio. In the future you will be able to see my other projects but now you can test my first react project which is made witch the help of Brad Traversy on Udemy.
+
 ## Available Scripts
 
 In the project directory, you can run:
