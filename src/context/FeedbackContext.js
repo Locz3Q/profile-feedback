@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import {v4 as uuidv4} from 'uuid'
+import FeedbackForm from "../components/FeedbackForm";
 
 const FeedbackContext = createContext()
 
@@ -29,7 +30,9 @@ export const FeedbackProvider = ({children}) => {
   })
 
   const updateFeedback = (id, updItem) => {
-    console.log(id, updItem);
+    setFeedback(
+      feedback.map((item) => (item.id === id ? {...item, ...updItem} : item))
+    )
   }
 
   const editFeedback = (item) => {

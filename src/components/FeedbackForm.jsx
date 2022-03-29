@@ -33,23 +33,22 @@ function FeedbackForm() {
         }
         setText(e.target.value)
     }
-const handleSubmit = (e) => {
-    e.preventDefault()
-    if(text.trim().length > 10) {
-        const newFeedback = {
-            text,
-            rating
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if(text.trim().length > 10) {
+            const newFeedback = {
+                text,
+                rating
+            }
 
-        if(feedbackEdit.edit === true){
-            updateFeedback(feedbackEdit.item.id, newFeedback)
-        } else {
-            addFeedback(newFeedback)
+            if(feedbackEdit.edit === true){
+                updateFeedback(feedbackEdit.item.id, newFeedback)
+            } else {
+                addFeedback(newFeedback)
+            }
+            setText('')
         }
-        addFeedback(newFeedback)
-        setText('')
     }
-}
 
   return (
     <Card>
